@@ -25,6 +25,9 @@ unset($files[1]);
 <ul>
 <?php foreach ($files as $key => $value) {
 	echo "<li><a href=\"test.php?test=$value\">$value</a></li>";
+	if (isAdmin()) {
+	echo "<li><a href=\"del.php?test=$value\">Удалить</a></li>";
+    }
 }
 ?>
 </ul>
